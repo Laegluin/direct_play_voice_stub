@@ -1,0 +1,13 @@
+[package]
+name = "direct_play_voice_stub"
+version = "1.0.0"
+authors = ["Robin Mirow <robinmirow@live.com>"]
+edition = "2018"
+
+[lib]
+crate-type = ["rlib", "cdylib"]
+
+[dependencies]
+com = { features = ["production"], git = "https://github.com/microsoft/com-rs" }
+winapi = { version = "0.3.9", features = ["combaseapi", "ntdef", "minwindef", "windef", "dsound", "std", "libloaderapi", "errhandlingapi"] }
+winreg = "0.7.0"
